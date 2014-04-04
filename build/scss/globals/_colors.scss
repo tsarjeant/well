@@ -1,0 +1,20 @@
+/* Colors
+------------------------------------------------------------ */
+
+$color-body-bg          : #F1F1F1;
+$color-header-bg        : #c2c1c0;
+
+$color-text             : #565555;
+$color-link             : #1c8dc8;
+$color-link-hover       : darken( $color-link, 10% );
+
+$color-button           : #efefef;
+
+
+
+$color-bg				: #2a2322;
+$color-bg-light			: lighten( $color-bg, 10%);
+
+$color-white-text		: #ffffff;
+$color-text-grey		: #737373;
+$color-text-darkgrey	: darken( $color-text-grey, 10% );
