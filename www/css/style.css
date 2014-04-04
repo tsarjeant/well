@@ -72,7 +72,8 @@ a, a:hover, a:focus, a:active {
 body {
   font-family: "Proxmia Nova", sans-serif;
   color: white;
-  font-weight: lighter; }
+  font-weight: lighter;
+  font-size: 19.584px; }
 
 /* Partials
 ------------------------------------------------------------ */
@@ -81,15 +82,53 @@ img {
   width: 100%;
   vertical-align: baseline; }
 
-html, body {
+html, body, .fixture {
   height: 100%; }
 
 .scrollContainer {
-  height: 100%; }
+  height: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; }
 
 .listMenu {
-  background: #2a2322;
+  background: #302827;
   width: 320px;
   padding-left: 30px;
   padding-right: 30px;
+  padding-top: 30px;
   height: 100%; }
+
+.fixture {
+  background: #448ccb;
+  height: 100%;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1; }
+
+.mainArea {
+  padding-top: 30px;
+  float: left;
+  height: 100%;
+  width: 100%;
+  margin-left: auto;
+  position: relative; }
+
+.details {
+  padding-top: 30px;
+  width: 320px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background: #302827;
+  float: right;
+  height: 100%; }
+
+.usage {
+  width: 100%;
+  background: #302827;
+  position: absolute;
+  bottom: 0; }

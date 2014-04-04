@@ -11,10 +11,15 @@ $color-link-hover       : darken( $color-link, 10% );
 $color-button           : #efefef;
 
 
+$color-blue				: #448ccb;
 
-$color-bg				: #2a2322;
+
+$color-bg				:  lighten( #2a2322, 2%);
+
 $color-bg-light			: lighten( $color-bg, 10%);
 
 $color-white-text		: #ffffff;
 $color-text-grey		: #737373;
 $color-text-darkgrey	: darken( $color-text-grey, 10% );
+
+
