@@ -1,6 +1,1 @@
-$(document).ready(function(){	
-
-
-
-
-});
+$(document).ready(function(){console.log("jquery has got it going on");$(window).resize(function(){var e=$(window).height(),t=$(window).width();$(".demensions").html(t+" X "+e)})});

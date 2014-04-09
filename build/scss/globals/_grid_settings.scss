@@ -10,7 +10,7 @@ $visual-grid-index: false;
 $visual-grid-opacity: 0.5;
 
 //Media Quaries
-$mobile      :new-breakpoint(max-width 480px,  12);
-$tablet-portrait 	:new-breakpoint(min-width 481px max-width 768px,  12);
-$medium     :new-breakpoint(min-width 769px max-width 1024px,  12);
-$big        :new-breakpoint(min-width 1025px,  12);
+$mobile      :new-breakpoint(max-width 480px,  12); 
+$tablet-portrait 	:new-breakpoint(min-width 481px max-width 768px,  12); //pretty mcuh the same as mobile but some things are reflowed
+$medium     :new-breakpoint(min-width 769px max-width 1280px,  12); //Fixture list remains visible.
+$big        :new-breakpoint(min-width 1281px,  12); //Everything after usage become a second sidebar.

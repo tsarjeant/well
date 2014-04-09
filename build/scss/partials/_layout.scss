@@ -19,6 +19,11 @@ html, body, .fixture, {
 	display: -webkit-flex;
 	display: flex;
 
+	@include media($mobile) {
+
+		max-width: 100vw;
+	}
+
 }
 
 .listMenu {
@@ -32,6 +37,14 @@ html, body, .fixture, {
 
 	height: 100%;
 
+	@include media($mobile) {
+
+		width: 0px;
+		padding-left: 0px;
+		padding-right: 0px;
+
+	}
+	
 }
 
 
@@ -40,7 +53,7 @@ html, body, .fixture, {
 
 	background: $color-blue;
 
-	
+
 	height: 100%;
 
   
@@ -65,6 +78,9 @@ html, body, .fixture, {
 	margin-left: auto;
 
 	position: relative;
+
+
+
 }
 
 .details {
@@ -86,5 +102,18 @@ html, body, .fixture, {
 	bottom: 0;
 }
 
+
+.demensions {
+
+	position: absolute;
+
+	bottom: 30px;
+	right: 30px;
+
+	color: white;
+
+	font-size: 12px;
+
+}
 
 
