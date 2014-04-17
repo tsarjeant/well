@@ -109,6 +109,14 @@ html, body {
 	
 }
 
+.fixtureGroup {
+
+
+	// @include media($mobile) { 
+	// 	width: 200vw;
+	// }
+	
+}
 
 .fixture {
 
@@ -116,17 +124,25 @@ html, body {
 	background: $color-blue;
 
 
+	display: none;
+
 	height: 100%;
 
   
 	position: relative;
 	z-index: 0;
 
-	@include media($medium) { 
+	@include media($mobile) { 
 		display: block;
-		
-	}
+		float: left;
+		width: 100vw;
+	 }
 
+}
+
+.activeFixture {
+
+	display: block;
 }
 
 .mainArea {
