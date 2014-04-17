@@ -1,11 +1,62 @@
+/*
+
+Type Styles
+
+Section Header 	8.16 Pt	16 light white
+		
+Numbers 		9.66 Pt	20 regular WHITE
+
+Label			4.8 Pt 	10 light #737373
+
+*/
+
+
+
 /* Typography
 ------------------------------------------------------------ */
 
 // $body-font-size           : 16px;
 // $body-line-height         : 1.5;
 // $scale-factor             : 1.618; // http://modularscale.com/
-$font-head				  : tisa, sans-serif;
-$font-body				  : "Proxmia Nova", sans-serif;
+$font-head				  : "ff-tisa-sans-web-pro", serif;
+$font-body				  : "proxima-nova", sans-serif;
+
+
+h1 {
+
+	font-family: $font-head;
+	font-size: 28px;
+	text-align: center;
+
+}
+
+h2, .header, .fixtureListItemName {
+
+	font-size: 20px;	
+	font-family: $font-body;
+	font-weight: lighter;
+}
+
+h3, .label, p {
+
+	font-size: 12px;
+	font-family: $font-body;
+	font-weight: lighter;
+}
+
+.number {
+
+	font-size: 24px;
+	text-align: right;
+
+}
+.label {
+
+	text-transform: uppercase;
+}
+
+
+
 
 
 // body { @include rhythm(0); 
@@ -52,7 +103,7 @@ body {
 	color: $color-white-text;
 	font-weight: lighter;
 
-	font-size: 19.584px;
+	//font-size: 19.584px;
 }
 
 

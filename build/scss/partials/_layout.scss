@@ -1,3 +1,16 @@
+
+$sectionPadding: 15px;
+@include media($mobile) {
+
+	$sectionPadding: 15px;
+}
+
+
+
+.clear {
+	clear: both;
+}
+
 /* --------------- Layout ---------------- */
 img {
     width: 100%;
@@ -5,45 +18,94 @@ img {
 }
 
 
-html, body, .fixture, {
+html, body, .fixture {
 	height: 100%;
 
 }
 
+
+html, body {
+
+	//overflow: hidden;
+}
+
+
 .scrollContainer {
+	
 
 	height: 100%;
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
+
+
+	@include media($medium) {
+
+		max-width: 100vw;
+		display: block;
+	}
+
+	@include media($tablet-portrait){
+		max-width: 100vw;
+		display: block;
+
+	//	overflow-x: scroll;
+	}
 
 	@include media($mobile) {
 
+	//	overflow-x: scroll;
 		max-width: 100vw;
+		display: block;
 	}
 
 }
 
 .listMenu {
-	background: $color-bg;
-	
+	//background: $color-bg;
+	background: #455761;
+	position: relative;
+	z-index: 100;
 
 	width: 320px;
-	padding-left: 30px;
-	padding-right: 30px;
-	padding-top: 30px;
+	// padding-left: $sectionPadding;
+	// padding-right: $sectionPadding;
+	// padding-top: $sectionPadding;
 
-	height: 100%;
+	height: 100vh;
+
+
+
+	@include media($big) {
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
+
+	@include media($medium) {
+
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
+
+	@include media($tablet-portrait){
+		width: 100vw;
+		padding-left: 0px;
+		padding-right: 0px;
+		margin-left: -100vw;
+
+		margin-bottom: -100vh;
+
+	}
 
 	@include media($mobile) {
 
-		width: 0px;
+		margin-bottom: -100vh;
+		width: 100vw;
 		padding-left: 0px;
 		padding-right: 0px;
+		margin-left: -100vw;
 
 	}
+
 	
 }
 
@@ -57,63 +119,138 @@ html, body, .fixture, {
 	height: 100%;
 
   
-	-webkit-box-flex: 1;
-	-moz-box-flex: 1;	
-	-webkit-flex: 1;
-	-ms-flex: 1;
-	flex: 1;
+	position: relative;
+	z-index: 0;
+
+	@include media($medium) { 
+		display: block;
+		
+	}
 
 }
 
 .mainArea {
 
 	
-	padding-top: 30px;
-	float: left;
-
-	height: 100%;
-
-	// 	width: 600px;
-	width: 100%;
+	padding-top: $sectionPadding;
+	min-height: 100vh;
+	//width: 100%;
 	margin-left: auto;
-
 	position: relative;
+
+
+	@include media($big){
+		padding-right: 320px;
+		padding-left: 320px;
+
+	}
+	@include media($medium) { 
+		padding-right: 0;
+		padding-left: 320px;
+		
+	}
 
 
 
 }
 
+.controlArea {
+
+	
+	min-height: 70vh;
+
+
+}
+
+
+
+
+
 .details {
 
-	padding-top: 30px;
-	width: 320px;
-	padding-left: 30px;
-	padding-right: 30px;
+	padding-top: $sectionPadding;
+	width: 100%;
+	padding-left: $sectionPadding;
+	padding-right: $sectionPadding;
 	background: $color-bg;
-	float: right;
-	height: 100%;
+	
+	//right: -320px;
+	//@include transition (right .32s ease);
+	min-height: 400px;
+
+
+	@include media($big) {
+
+		position: fixed;
+		right: 0;
+		top: 0;
+		min-height: 100vh;
+		width: 320px;
+
+	}
+
+	@include media($medium) {
+
+		float: left;
+		padding-left: 320px + $sectionPadding;
+	}
 
 }
 .usage {
 
-	width: 100%;
+	
 	background: $color-bg;
-	position: absolute;
+	padding-top: $sectionPadding;
+	
+	padding-left: $sectionPadding;
+	padding-right: $sectionPadding;
+
 	bottom: 0;
+	min-height: 30vh;
+	
+
+	@include media($medium) {
+
+	padding-right: $sectionPadding;
+	
+	}
+
 }
 
 
 .demensions {
 
-	position: absolute;
+	display: block;
+	position: fixed;
 
 	bottom: 30px;
 	right: 30px;
 
-	color: white;
+	color: orange;
 
 	font-size: 12px;
 
 }
 
+.mobileHeader {
 
+	position: fixed;
+	height: 60px;
+	padding-top: 16px;
+	overflow: hidden;
+	background: pink;
+	width: 100%;
+	top: 0;
+	left: 0;
+
+
+	@include media($big) {
+		top: -60px;
+
+	}
+	@include media($medium) {
+		top: -60px;
+
+	}
+
+}

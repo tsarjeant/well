@@ -67,16 +67,51 @@ a, a:hover, a:focus, a:active {
    ========================================================================== */
 /* Colors
 ------------------------------------------------------------ */
+/*
+
+Type Styles
+
+Section Header 	8.16 Pt	16 light white
+		
+Numbers 		9.66 Pt	20 regular WHITE
+
+Label			4.8 Pt 	10 light #737373
+
+*/
 /* Typography
 ------------------------------------------------------------ */
+h1 {
+  font-family: "ff-tisa-sans-web-pro", serif;
+  font-size: 28px;
+  text-align: center; }
+
+h2, .header, .fixtureListItemName {
+  font-size: 20px;
+  font-family: "proxima-nova", sans-serif;
+  font-weight: lighter; }
+
+h3, .label, p {
+  font-size: 12px;
+  font-family: "proxima-nova", sans-serif;
+  font-weight: lighter; }
+
+.number {
+  font-size: 24px;
+  text-align: right; }
+
+.label {
+  text-transform: uppercase; }
+
 body {
-  font-family: "Proxmia Nova", sans-serif;
+  font-family: "proxima-nova", sans-serif;
   color: white;
-  font-weight: lighter;
-  font-size: 19.584px; }
+  font-weight: lighter; }
 
 /* Partials
 ------------------------------------------------------------ */
+.clear {
+  clear: both; }
+
 /* --------------- Layout ---------------- */
 img {
   width: 100%;
@@ -86,64 +121,189 @@ html, body, .fixture {
   height: 100%; }
 
 .scrollContainer {
-  height: 100%;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex; }
+  height: 100%; }
+  @media screen and (min-width: 769px) and (max-width: 1100px) {
+    .scrollContainer {
+      max-width: 100vw;
+      display: block; } }
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    .scrollContainer {
+      max-width: 100vw;
+      display: block; } }
   @media screen and (max-width: 480px) {
     .scrollContainer {
-      max-width: 100vw; } }
+      max-width: 100vw;
+      display: block; } }
 
 .listMenu {
-  background: #302827;
+  background: #455761;
+  position: relative;
+  z-index: 100;
   width: 320px;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 30px;
-  height: 100%; }
+  height: 100vh; }
+  @media screen and (min-width: 1101px) {
+    .listMenu {
+      position: fixed;
+      top: 0;
+      left: 0; } }
+  @media screen and (min-width: 769px) and (max-width: 1100px) {
+    .listMenu {
+      position: fixed;
+      top: 0;
+      left: 0; } }
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    .listMenu {
+      width: 100vw;
+      padding-left: 0px;
+      padding-right: 0px;
+      margin-left: -100vw;
+      margin-bottom: -100vh; } }
   @media screen and (max-width: 480px) {
     .listMenu {
-      width: 0px;
+      margin-bottom: -100vh;
+      width: 100vw;
       padding-left: 0px;
-      padding-right: 0px; } }
+      padding-right: 0px;
+      margin-left: -100vw; } }
 
 .fixture {
   background: #448ccb;
   height: 100%;
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1; }
+  position: relative;
+  z-index: 0; }
+  @media screen and (min-width: 769px) and (max-width: 1100px) {
+    .fixture {
+      display: block; } }
 
 .mainArea {
-  padding-top: 30px;
-  float: left;
-  height: 100%;
-  width: 100%;
+  padding-top: 15px;
+  min-height: 100vh;
   margin-left: auto;
   position: relative; }
+  @media screen and (min-width: 1101px) {
+    .mainArea {
+      padding-right: 320px;
+      padding-left: 320px; } }
+  @media screen and (min-width: 769px) and (max-width: 1100px) {
+    .mainArea {
+      padding-right: 0;
+      padding-left: 320px; } }
+
+.controlArea {
+  min-height: 70vh; }
 
 .details {
-  padding-top: 30px;
-  width: 320px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-top: 15px;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
   background: #302827;
-  float: right;
-  height: 100%; }
+  min-height: 400px; }
+  @media screen and (min-width: 1101px) {
+    .details {
+      position: fixed;
+      right: 0;
+      top: 0;
+      min-height: 100vh;
+      width: 320px; } }
+  @media screen and (min-width: 769px) and (max-width: 1100px) {
+    .details {
+      float: left;
+      padding-left: 335px; } }
 
 .usage {
-  width: 100%;
   background: #302827;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  bottom: 0;
+  min-height: 30vh; }
+  @media screen and (min-width: 769px) and (max-width: 1100px) {
+    .usage {
+      padding-right: 15px; } }
+
+.demensions {
+  display: block;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  color: orange;
+  font-size: 12px; }
+
+.mobileHeader {
+  position: fixed;
+  height: 60px;
+  padding-top: 16px;
+  overflow: hidden;
+  background: pink;
+  width: 100%;
+  top: 0;
+  left: 0; }
+  @media screen and (min-width: 1101px) {
+    .mobileHeader {
+      top: -60px; } }
+  @media screen and (min-width: 769px) and (max-width: 1100px) {
+    .mobileHeader {
+      top: -60px; } }
+
+.notifications {
+  display: none; }
+
+.menu {
+  padding: 15px; }
+
+.menuButton {
+  color: white;
+  padding: 10px;
+  width: 33%;
+  overflow: hidden;
+  float: left; }
+  .menuButton .menuIcon {
+    height: 40px;
+    width: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #8F9194; }
+  .menuButton .label {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-align: center;
+    display: block; }
+    .menuButton .label a {
+      color: white !important; }
+
+.fixtureListItem {
+  display: block;
+  height: 50px;
+  width: 320px;
+  padding: 15px; }
+  .fixtureListItem .statusIndicator {
+    height: 12px;
+    width: 12px;
+    background: red;
+    margin-top: 14px;
+    margin-right: 10px;
+    border-radius: 100%;
+    float: left; }
+  .fixtureListItem .fixtureListItemName {
+    float: left;
+    display: block; }
+
+.activeFixture {
+  background: #526772; }
+
+.defaultGroup {
+  width: 33%; }
+
+.listMenuFooter {
   position: absolute;
   bottom: 0; }
 
-.demensions {
-  position: absolute;
-  bottom: 30px;
-  right: 30px;
-  color: white;
-  font-size: 12px; }
+.usage {
+  background: #2a2322; }
+
+.usageChart {
+  height: 300px;
+  width: 100%;
+  background: url("../img/proofchart.png") top left no-repeat;
+  background-size: contain; }

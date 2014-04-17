@@ -1,0 +1,125 @@
+
+.notifications {
+
+	display: none;
+}
+
+.menu {
+
+	padding: $sectionPadding;
+}
+
+.menuButton {
+
+	//cursor: pointer;
+	color: white;
+
+	padding: 10px;
+	width: 33%;
+	overflow: hidden;
+	float: left;
+
+
+
+	.menuIcon {
+	height: 40px;
+	width: 40px;
+
+	margin-left: auto;
+	margin-right: auto;
+	background: #8F9194;
+	}
+	.label {
+
+		padding-bottom: 10px;
+		padding-top: 10px;
+
+		text-align: center;
+		display: block;
+		a	 {
+		color: white !important;
+		}
+	}
+}
+
+
+
+.fixtureListItem {
+
+	display: block;
+
+	height: 50px;
+	width: 320px;
+	padding: 15px;
+	
+	//background: blue;
+
+	.statusIndicator {
+
+		
+		height: 12px;
+		width: 12px;
+		background: red;
+		margin-top: 14px;
+		margin-right: 10px;
+		border-radius: 100%;
+		float: left;
+
+
+	}
+
+	.fixtureListItemName {
+
+		float: left;
+		display: block;
+		//line-height: 40px;
+	}
+
+	
+
+	
+
+}
+.activeFixture {
+
+	background: #526772;
+}
+
+
+
+.defaultGroup {
+
+	width: 33%;
+
+
+}
+
+
+
+.listMenuFooter {
+
+	position: absolute;
+	bottom: 0;
+}
+
+
+
+
+.usage {
+
+	background: #2a2322;
+}
+
+
+.usageChart {
+
+	//border: 1px solid white;
+	height: 300px;
+	width: 100%;
+	background: url("../img/proofchart.png") top left no-repeat;
+	background-size: contain;
+}
+
+
+
+

@@ -6,9 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Well</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+
+
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+
+    <script type="text/javascript" src="//use.typekit.net/iju3ylo.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
   
     <link rel="stylesheet" href="css/style.css">
+
+
+
 
  
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
@@ -32,23 +46,24 @@
 			<!-- Menu Bar -->
 			<div class="menu">
 				<a class="menuButton notficationsButton" href="#">
-					<div class="notificationsIcon"></div>
-					<span class="notificationsBadge">2</span>
-					<span>Notifications</span> 
+					<div class="notificationsIcon menuIcon"></div>
+					<!-- <span class=" label notificationsBadge">2</span> -->
+					<span class="label">Notifications</span> 
 				</a>
 				<a class="menuButton automateButton" href="#">
-					<div class="autiomationIcon"></div>
-					<span>Automate</span> 
+					<div class="autiomationIcon menuIcon"></div>
+					<span class="label">Automate</span> 
 				</a>
 				<a class="menuButton settingsButton" href="#">
-					<div class="settingsIcon"></div>
-					<span>Settings</span> 
+					<div class="settingsIcon menuIcon"></div>
+					<span class="label">Settings</span> 
 				</a>
 			</div>
+			<div class="clear"></div>
 
 			<!-- Notifications -->
-			<div class="notifcations">
-				<h3>Notifications</h3>
+			<div class="notifications">
+				<h2>Notifications</h2>
 				<ul>
 					<li class="notification">
 						<h4>New Well Found</h4>
@@ -104,25 +119,75 @@
 
 					</div>
 					<div class="defaults">
-						<h4>Defaults</h4>
-
+						<h2>Fixture Defaults</h2>
+						<div class="defaultGroup">
+							<span class="label">cold</span>
+							<span class="number defaultValue">50°</span>
+						</div>
+						<div class="defaultGroup">
+							<span class="label">medium</span>
+							<span class="number defaultValue">50°</span>
+						</div>
+						<div class="defaultGroup">
+							<span class="label">hot</span>
+							<span class="number defaultValue">50°</span>
+						</div>
+						
 					</div>
 
 				</div>
 				<div class="usage">
-					<h4>Usage</h4>
+					<h2>Usage</h2>
+					<div class="usageChart">
+					</div>
+					<div class="usageTotals">
+						<div class="usageGroup">
+							<span class="label">Today</span>
+							<span class="number defaultValue">50</span>
+						</div>
+						<div class="defaultGroup">
+							<span class="label">medium</span>
+							<span class="number defaultValue">50°</span>
+						</div>
+						<div class="defaultGroup">
+							<span class="label">hot</span>
+							<span class="number defaultValue">50°</span>
+						</div>
+						
+					</div>
 
 				</div>
 
 			</div>
-			
+			<!-- Details section Begins here ------------------------ -->
+			<div class="details">
+				<h2>Limits</h2>
+				<h2>Automation</h2>
+				<h2>Configure</h2>
+			</div>
+				
 
 		</div>
+		
 
-		<!-- Details section Begins here ------------------------ -->
-		<div class="details">
-			<h4>Automation</h4>
+		<!-- the header  -->
+		<div class="mobileHeader">
+			<ul class="headerTitle">
+				<li class="header">Kitchen Sink</li>
+				<li class="header">Master Bath Sink</li>
+				<li class="header">Master Bath Shower</li>
+				<li class="header">Downstairs Shower</li>
+				<li class="header">Garage Spigot</li>
+			</ul>
+
+			<ul class="paginate">
+				<li>•</li>
+				<li>•</li>
+				<li>•</li>
+				<li>•</li>
+			</ul>
 		</div>
+		
 
 
 	</div>
